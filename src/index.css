@@ -1,11 +1,12 @@
 * {
   background-color: #000000;
+  font-family: 'Poppins', sans-serif;
 }
 .sidebar {
-  height: 95vh;
+  height: 85vh;
   width: 80px;
   border-radius: 15px;
-  margin-top: 10px;
+  margin-top: 50px;
   margin-left: 20px;
   color: #8694a4;
   box-shadow: 1px 1px 3px 3px #8694a4;
@@ -66,6 +67,9 @@
 .home-search-icon svg {
   background-color: transparent !important;
 }
+.home-search-icon:hover svg {
+  padding: 10px;
+}
 .home-user-profile {
   flex-grow: 1;
   border: 1px #8694a4 solid;
@@ -108,10 +112,14 @@
   border-radius: 70px;
   display: flex;
   gap: 10px;
+  cursor: pointer;
+}
+.home-search:hover {
+  border: 1px solid #7163b1;
 }
 .home-search-input {
   color: white;
-  width: 90%;
+  width: 70%;
   padding: 10px;
   border: none;
   border-bottom: none;
@@ -124,6 +132,147 @@
 }
 .home-user-profile {
   flex-grow: 1;
+}
+.home-body {
+  display: flex;
+  gap: 20%;
+  margin-top: 10px;
+}
+.home-body-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+  padding: 20px;
+  cursor: pointer;
+}
+.home-body-1:hover {
+  padding: 30px;
+}
+.home-body-2 {
+  padding: 30px;
+  border: 1px #8694a4 solid;
+  background-color: #14181f !important;
+  border-radius: 35px;
+  position: relative;
+}
+.home-body-3 {
+  position: relative;
+  z-index: 0;
+  padding: 30px;
+  border-radius: 35px;
+  background: #14181f;
+  overflow: hidden;
+  isolation: isolate; /* Ensure z-index and stacking context are isolated */
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.home-body-3::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 35px;
+  padding: 3px; /* Border thickness */
+  background: conic-gradient(from var(--angle), #7163b1, transparent, #ffc107);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  animation: spin 3s linear infinite;
+  z-index: -1;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+.home-country {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: 15px;
+  background-color: #7163b1;
+  border: 1px solid #8694a4;
+  border-radius: 30px;
+  width: 150px;
+}
+.home-country:hover {
+  background-color: #14181f;
+}
+.home-country-p {
+  background-color: transparent;
+}
+.home-country svg {
+  background-color: transparent;
+  margin-left: 10px;
+}
+.home-p {
+  background-color: transparent;
+  font-size: 35px;
+}
+.home-p-date {
+  background-color: transparent !important;
+}
+.home-weather-info {
+  display: flex;
+  gap: 20%;
+  background-color: transparent !important;
+  margin-left: 3px;
+  margin-top: 35px;
+}
+.home-weather-1 {
+  flex-grow: 4;
+  background-color: transparent !important;
+}
+.home-weather-1 svg {
+  background-color: transparent;
+  font-size: 85px;
+  margin-left: 40%;
+  margin-top: -30px;
+}
+.home-weather-2 {
+  flex-grow: 1;
+  background-color: transparent !important;
+  margin-top: -20px;
+}
+.home-weather-2 p {
+  margin-left: 42%;
+  margin-top: -15px;
+  background-color: transparent !important;
+}
+.home-weather-2 h1 {
+  margin-left: 40%;
+  margin-top: -10px;
+  font-size: 40px;
+  font-weight: 100;
+  background-color: transparent !important;
+}
+.home-weather-2 img {
+  background-color: transparent !important;
+  width: 250px;
+}
+.home-weather-info p {
+  background-color: #14181f;
+  font-size: 17px;
+}
+p.home-temp {
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: -10px;
+  background-color: transparent !important;
+}
+.home-temp-p {
+  background-color: transparent !important;
 }
 @media only screen and (max-width: 600px) {
   .sidebar {
