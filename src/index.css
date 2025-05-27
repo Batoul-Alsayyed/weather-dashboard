@@ -1,13 +1,82 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.sidebar {
+  height: 95vh;
+  width: 80px;
+  border-radius: 15px;
+  margin-top: 10px;
+  margin-left: 20px;
+  background-color: black;
+  color: rgba(255, 255, 255, 0.685);
+  box-shadow: 1px 1px 3px 3px #8694a4;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.nav {
+  padding-top: 15vh;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  grid-auto-rows: 1rem;
+  gap: 60px;
+}
+.nav-logo {
+  width: 80px;
+}
+.link {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+  gap: 10px;
+}
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.nav-link:hover {
+  color: #8694a4;
+  width: 100%;
+}
+.active-link {
+  color: #7163b1;
+  font-weight: bold;
+}
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    height: 100vh;
+    width: 30px;
+    margin-top: 0px;
+    margin-left: 0px;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+  }
+  .nav {
+    padding-top: 15vh;
+    padding-left: 0px;
+    gap: 40px;
+  }
+  .nav-logo {
+    width: 25px;
+  }
+  .link {
+    gap: 10px;
+  }
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  .nav-link:hover {
+    color: #8694a4;
+    width: 100%;
+  }
+  .nav-link.active-link {
+    font-size: 1rem;
+    color: #7163b1;
+    font-weight: bold;
+  }
 }
