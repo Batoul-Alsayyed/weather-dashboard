@@ -1,11 +1,13 @@
+* {
+  background-color: #000000;
+}
 .sidebar {
   height: 95vh;
   width: 80px;
   border-radius: 15px;
   margin-top: 10px;
   margin-left: 20px;
-  background-color: black;
-  color: rgba(255, 255, 255, 0.685);
+  color: #8694a4;
   box-shadow: 1px 1px 3px 3px #8694a4;
   display: flex;
   flex-direction: column;
@@ -43,6 +45,85 @@
 .active-link {
   color: #7163b1;
   font-weight: bold;
+}
+.home-container {
+  color: white;
+}
+.home-header {
+  display: flex;
+  flex-direction: row;
+  gap: 50%;
+  margin-top: 20px;
+}
+.home-search-icon {
+  font-size: 25px;
+  padding: 5px;
+  margin-top: 15px;
+  margin-left: 15px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.home-search-icon svg {
+  background-color: transparent !important;
+}
+.home-user-profile {
+  flex-grow: 1;
+  border: 1px #8694a4 solid;
+  background-color: #14181f;
+  padding: 5px;
+  border-radius: 70px;
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+  color: #8694a4;
+}
+.home-user-profile p {
+  background-color: #14181f;
+  flex-grow: 1;
+}
+.home-user-profile-icon {
+  background-color: #14181f;
+  flex-grow: 1;
+  margin-top: 5%;
+  cursor: pointer;
+}
+.home-profile {
+  width: 40px;
+  height: 40px;
+  margin-top: 3%;
+  margin-left: 5%;
+  border-radius: 50%;
+  background-color: transparent !important;
+  object-fit: cover;
+  display: block;
+}
+.home-profile img {
+  background-color: transparent !important;
+}
+.home-search {
+  flex-grow: 1;
+  border: 1px #8694a4 solid;
+  background-color: #14181f;
+  padding: 5px;
+  border-radius: 70px;
+  display: flex;
+  gap: 10px;
+}
+.home-search-input {
+  color: white;
+  width: 90%;
+  padding: 10px;
+  border: none;
+  border-bottom: none;
+  background: transparent;
+  font-size: 20px;
+}
+.home-search-input:focus {
+  border-bottom: 2px solid white;
+  outline: none;
+}
+.home-user-profile {
+  flex-grow: 1;
 }
 @media only screen and (max-width: 600px) {
   .sidebar {

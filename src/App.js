@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from './Sidebar';
+import Home from './Home';
 
 const App = () => {
   return (
@@ -8,7 +9,7 @@ const App = () => {
       <Sidebar />
       <div style={{ marginLeft: '200px', padding: '1rem' }}>
         <Routes>
-          <Route path="/" element={<h1>Home</h1>} />
+          <Route path="/" element={<Home />} />
           <Route path="/forecast" element={<h1>Forecast</h1>} />
           <Route path="/locations" element={<h1>Locations</h1>} />
           <Route path="/calendar" element={<h1>Calendar</h1>} />
